@@ -1,0 +1,12 @@
+url: https://omjet.ru/
+browser: chrome
+sleep_time: 5
+driver_path_chrom: C:/chromedriver.exe
+driver_path_firefox: Homework/geckodriver.exe
+title: ОМДЖЕТ
+email: INFO@OMJET.RU
+phone: +7 3812 99 20 72
+address: Г. ОМСК, УЛ. КЕМЕРОВСКАЯ 10, ОФ. 113
+chat_message: test
+test_phone: 70000000000
+phone_confirmation: В ближайшие несколько секунд с вами свяжется менеджер.
