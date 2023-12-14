@@ -44,3 +44,8 @@ class Site:
 
 	def close(self):
 		self.driver.close()
+
+
+
+
+

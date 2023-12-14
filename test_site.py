@@ -26,7 +26,7 @@ def test_address(address, site):
 	address = site.find_element("xpath", address)
 	assert address.text == testdata["address"]
 
-#проверка функционирования чата
+#проверка функционирования чата (только в рабочие часы)
 def test_omjet(site, widget, omjet, omjet_input,omjet_enter, omjet_result, omjet_close):
 	widget = site.find_element("xpath", widget)
 	widget.click()
@@ -42,7 +42,7 @@ def test_omjet(site, widget, omjet, omjet_input,omjet_enter, omjet_result, omjet
 	close.click()
 	assert result.text == testdata["chat_message"]
 
-#Проверка функционирования обратного звонка
+#Проверка функционирования обратного звонка (только в рабочие часы)
 def test_callback(site, widget, phone_btn,phone_input, call_btn, phone_result, phone_close):
 	widget = site.find_element("xpath", widget)
 	widget.click()
@@ -60,4 +60,26 @@ def test_callback(site, widget, phone_btn,phone_input, call_btn, phone_result, p
 	assert phone_result.text == testdata["phone_confirmation"]
 
 #проверка формы обратной связи
-
+def test_feedback(site, widget, feedback_btn, feedback_input_name, feedback_input_surname, feedback_input_phone,
+                  feedback_input_email, feedback_send_btn, feedback_result):
+	try:
+		widget = site.find_element("xpath", widget)
+		widget.click()
+	except:
+		pass
+	feedback_btn = site.find_element("xpath", feedback_btn)
+	feedback_btn.click()
+	feedback_input_name = site.find_element("xpath", feedback_input_name)
+	feedback_input_name.send_keys(testdata["name"])
+	feedback_input_surname = site.find_element("xpath", feedback_input_surname)
+	feedback_input_surname.send_keys(testdata["surname"])
+	feedback_input_phone = site.find_element("xpath", feedback_input_phone)
+	feedback_input_phone.send_keys(testdata["test_phone"])
+	feedback_input_email = site.find_element("xpath", feedback_input_email)
+	feedback_input_email.send_keys(testdata["test_email"])
+	feedback_send_btn = site.find_element("xpath", feedback_send_btn)
+	feedback_send_btn.click()
+	time.sleep(testdata["sleep_time"])
+	feedback_result = site.find_element("xpath", feedback_result)
+	time.sleep(testdata["sleep_time"])
+	assert feedback_result.text == testdata["feedback_confirmation"]

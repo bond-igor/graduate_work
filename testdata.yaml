@@ -1,6 +1,6 @@
 url: https://omjet.ru/
 browser: chrome
-sleep_time: 5
+sleep_time: 1
 driver_path_chrom: C:/chromedriver.exe
 driver_path_firefox: Homework/geckodriver.exe
 title: ОМДЖЕТ
@@ -10,3 +10,7 @@ address: Г. ОМСК, УЛ. КЕМЕРОВСКАЯ 10, ОФ. 113
 chat_message: test
 test_phone: 70000000000
 phone_confirmation: В ближайшие несколько секунд с вами свяжется менеджер.
+name: Test
+surname: Testov
+test_email: test@mail.ru
+feedback_confirmation: Спасибо, ваше сообщение отправлено.
