@@ -1,5 +1,7 @@
 import yaml
 import time
+from testpage import OperationsHelper
+import logging
 
 
 with open("testdata.yaml", encoding='utf-8') as f:
@@ -7,79 +9,78 @@ with open("testdata.yaml", encoding='utf-8') as f:
 
 
 #проверка загрузки главной страницы
-def test_loading_site(title, site):
-	title = site.find_element("xpath", title)
-	assert title.text == testdata["title"]
+def test_loading_site(browser):
+	logging.info("Тест  проверки загрузки страницы запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	assert testpage.loading_site() == testdata["title"]
+
 
 #отображение емейла
-def test_email(email, site):
-	email = site.find_element("xpath", email)
-	assert email.text == testdata["email"]
+def test_email(browser):
+	logging.info("Тест проверки отображения email запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	assert testpage.email() == testdata["email"]
 
 #отображение телефона
-def test_phone(phone, site):
-	phone = site.find_element("xpath", phone)
-	assert phone.text == testdata["phone"]
+def test_phone(browser):
+	logging.info("Тест проверки отображения телефона запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	assert testpage.phone() == testdata["phone"]
 
 #отображение адреса
-def test_address(address, site):
-	address = site.find_element("xpath", address)
-	assert address.text == testdata["address"]
+def test_address(browser):
+	logging.info("Тест проверки отображения адреса запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	assert testpage.address() == testdata["address"]
 
 #проверка функционирования чата (только в рабочие часы)
-def test_omjet(site, widget, omjet, omjet_input,omjet_enter, omjet_result, omjet_close):
-	widget = site.find_element("xpath", widget)
-	widget.click()
-	omjet = site.find_element("xpath", omjet)
-	omjet.click()
-	input_text = site.find_element("xpath", omjet_input)
-	input_text.send_keys(testdata["chat_message"])
-	enter = site.find_element("xpath", omjet_enter)
-	enter.click()
+def test_omjet(browser):
+	logging.info("Тест проверки чата запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	testpage.click_widget()
+	testpage.click_omjet()
+	testpage.omjet_input(testdata["chat_message"])
+	testpage.click_omjet_enter()
 	time.sleep(testdata["sleep_time"])
-	result = site.find_element("xpath", omjet_result)
-	close = site.find_element("xpath", omjet_close)
-	close.click()
-	assert result.text == testdata["chat_message"]
+	result = testpage.omjet_result()
+	testpage.click_omjet_close()
+	assert result == testdata["chat_message"]
 
 #Проверка функционирования обратного звонка (только в рабочие часы)
-def test_callback(site, widget, phone_btn,phone_input, call_btn, phone_result, phone_close):
-	widget = site.find_element("xpath", widget)
-	widget.click()
-	phone_btn = site.find_element("xpath", phone_btn)
-	phone_btn.click()
-	phone_input = site.find_element("xpath", phone_input)
-	phone_input.send_keys(testdata["test_phone"])
-	call_btn = site.find_element("xpath", call_btn)
-	call_btn.click()
+def test_callback(browser):
+	logging.info("Тест проверки заказа обратного звонка запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
+	testpage.click_widget()
+	testpage.click_phone_btn()
+	testpage.phone_input(testdata["test_phone"])
+	testpage.click_call_btn()
 	time.sleep(testdata["sleep_time"])
-	phone_result = site.find_element("xpath", phone_result)
-	time.sleep(testdata["sleep_time"])
-	phone_close = site.find_element("xpath", phone_close)
-	phone_close.click()
-	assert phone_result.text == testdata["phone_confirmation"]
+	phone_result = testpage.phone_result()
+	testpage.click_phone_close()
+	assert phone_result == testdata["phone_confirmation"]
 
 #проверка формы обратной связи
-def test_feedback(site, widget, feedback_btn, feedback_input_name, feedback_input_surname, feedback_input_phone,
-                  feedback_input_email, feedback_send_btn, feedback_result):
+def test_feedback(browser):
+	logging.info("Тест проверки формы обратной связи запущен")
+	testpage = OperationsHelper(browser, testdata["url"])
+	testpage.go_to_site()
 	try:
-		widget = site.find_element("xpath", widget)
-		widget.click()
+		testpage.click_widget()
 	except:
 		pass
-	feedback_btn = site.find_element("xpath", feedback_btn)
-	feedback_btn.click()
-	feedback_input_name = site.find_element("xpath", feedback_input_name)
-	feedback_input_name.send_keys(testdata["name"])
-	feedback_input_surname = site.find_element("xpath", feedback_input_surname)
-	feedback_input_surname.send_keys(testdata["surname"])
-	feedback_input_phone = site.find_element("xpath", feedback_input_phone)
-	feedback_input_phone.send_keys(testdata["test_phone"])
-	feedback_input_email = site.find_element("xpath", feedback_input_email)
-	feedback_input_email.send_keys(testdata["test_email"])
-	feedback_send_btn = site.find_element("xpath", feedback_send_btn)
-	feedback_send_btn.click()
+	testpage.click_feedback_btn()
+	testpage.feedback_input_name(testdata["name"])
+	testpage.feedback_input_surname(testdata["surname"])
+	testpage.feedback_input_phone(testdata["test_phone"])
+	testpage.feedback_input_email(testdata["test_email"])
+	testpage.click_feedback_send_btn()
 	time.sleep(testdata["sleep_time"])
-	feedback_result = site.find_element("xpath", feedback_result)
+	feedback_result = testpage.feedback_result()
 	time.sleep(testdata["sleep_time"])
-	assert feedback_result.text == testdata["feedback_confirmation"]
+	assert feedback_result == testdata["feedback_confirmation"]

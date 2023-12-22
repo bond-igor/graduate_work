@@ -1,8 +1,6 @@
 url: https://omjet.ru/
 browser: chrome
 sleep_time: 1
-driver_path_chrom: C:/chromedriver.exe
-driver_path_firefox: Homework/geckodriver.exe
 title: ОМДЖЕТ
 email: INFO@OMJET.RU
 phone: +7 3812 99 20 72

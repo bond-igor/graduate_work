@@ -1,0 +1,25 @@
+xpath:
+  title: //*[@id="b5538"]/section/div/h2/p[1]/span
+  email: //*[@id="navBar5598"]/ul/li[1]/a
+  phone: //*[@id="navBar5598"]/ul/li[3]/a
+  address: //*[@id="navBar5598"]/ul/li[2]/a
+  widget: /html/body/div[2]/div/div[3]/div[3]/div[2]/div[2]/div[1]
+  omjet: /html/body/div[2]/div/div[3]/div[2]/a[1]
+  omjet_input: /html/body/div[1]/div/div/div[4]/div[2]/div[1]/textarea
+  omjet_enter: /html/body/div[1]/div/div/div[4]/div[2]/div[1]/button
+  omjet_result: /html/body/div[1]/div/div/div[5]/div/div/div/div/div/div/div[1]/div[1]/div
+  omjet_close: /html/body/div[1]/div/div/div[2]/div/div[3]/button
+  phone_btn: /html/body/div[2]/div/div[3]/div[2]/a[2]
+  phone_input: //*[@id="b24-b24-site-button-form-72"]/div/div[2]/div/div/div[2]/form/div[1]/div/div/div/div/input
+  call_btn: //*[@id="b24-b24-site-button-form-72"]/div/div[2]/div/div/div[2]/form/div[3]/div/button
+  phone_result: //*[@id="b24-b24-site-button-form-72"]/div/div[2]/div/div/div[3]/div[2]/div[1]/div[2]
+  phone_close: //*[@id="b24-b24-site-button-form-72"]/div/div[2]/button
+  feedback_btn: /html/body/div[1]/div/div[3]/div[3]/div[2]/div[2]/div[1]/div[1]
+  feedback_input_name: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[2]/form/div[1]/div[1]/div/div/div/input
+  feedback_input_surname: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[2]/form/div[1]/div[2]/div/div/div/input
+  feedback_input_phone: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[2]/form/div[1]/div[3]/div/div/div/input
+  feedback_input_email: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[2]/form/div[1]/div[4]/div/div/div/input
+  feedback_send_btn: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[2]/form/div[3]/div/button
+  feedback_result: //*[@id="b24-b24-site-button-form-74"]/div/div[2]/div/div/div[2]/div[3]/div[2]/div[1]/div[2]
+css:
+  LOCATOR_LOGIN_BTN: button

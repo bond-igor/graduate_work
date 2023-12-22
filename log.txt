@@ -1,0 +1,1592 @@
+2023-12-23 01:47:55 - INFO - log: 11 - ====== WebDriver manager ======
+2023-12-23 01:47:56 - INFO - log: 11 - Get LATEST chromedriver version for google-chrome
+2023-12-23 01:47:56 - INFO - log: 11 - Get LATEST chromedriver version for google-chrome
+2023-12-23 01:47:57 - INFO - log: 11 - Driver [C:\Users\bonda\.wdm\drivers\chromedriver\win64\120.0.6099.109\chromedriver-win32/chromedriver.exe] found in cache
+2023-12-23 01:47:58 - INFO - test_loading_site: 13 - Тест  проверки загрузки страницы запущен
+2023-12-23 01:51:50 - INFO - get_text_from_element: 52 - Мы находим текст ОМДЖЕТ в поле ('xpath', '//*[@id="b5538"]/section/div/h2/p[1]/span')
+2023-12-23 01:51:50 - INFO - test_email: 21 - Тест проверки отображения email запущен
+2023-12-23 01:55:37 - ERROR - go_to_site: 32 - Ошибка открытия сайта
+Traceback (most recent call last):
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 30, in go_to_site
+    start_browser = self.driver.get(self.base_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1376, in getresponse
+    self.close()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 270, in close
+    def close(self) -> None:
+    
+KeyboardInterrupt
+2023-12-23 01:55:41 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A0910>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:55:45 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A1350>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:55:49 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A1E90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:55:53 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F6A2B10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A2B10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:55:53 - INFO - test_phone: 28 - Тест проверки отображения телефона запущен
+2023-12-23 01:55:57 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F2A1350>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:01 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08E262150>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:06 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F2BE610>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:10 - ERROR - go_to_site: 32 - Ошибка открытия сайта
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F70A1D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 30, in go_to_site
+    start_browser = self.driver.get(self.base_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F70A1D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:56:14 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F709650>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:18 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F70A910>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:22 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F70B410>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:26 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F715290>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F715290>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:56:26 - INFO - test_address: 35 - Тест проверки отображения адреса запущен
+2023-12-23 01:56:30 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F708AD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:34 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F718A10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:38 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F71AD90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:56:42 - ERROR - go_to_site: 32 - Ошибка открытия сайта
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F7221D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 30, in go_to_site
+    start_browser = self.driver.get(self.base_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7221D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:56:46 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7227D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:50 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F71C790>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:55 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F71DBD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:56:59 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F6AF050>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6AF050>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:56:59 - INFO - test_omjet: 42 - Тест проверки чата запущен
+2023-12-23 01:57:03 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7199D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:57:07 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F71DAD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:57:11 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F298690>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:57:15 - ERROR - go_to_site: 32 - Ошибка открытия сайта
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F2A0890>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 30, in go_to_site
+    start_browser = self.driver.get(self.base_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F2A0890>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:57:19 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7083D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:23 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F709710>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:27 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F70BFD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:31 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F6FCFD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6FCFD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:57:35 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A11D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:39 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A2F90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:44 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6A0CD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:48 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F2BF410>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F2BF410>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:57:48 - INFO - enter_text_into_field: 26 - Отправлено 'test' элементу Chat
+2023-12-23 01:57:52 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F724F90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:57:56 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F726410>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:00 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F726F90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:04 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F727B10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F727B10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:58:04 - ERROR - enter_text_into_field: 29 - Элемент ('xpath', '/html/body/div[1]/div/div/div[4]/div[2]/div[1]/textarea') не найден
+2023-12-23 01:58:08 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F74D150>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:12 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F74DC90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:16 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F74E810>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:20 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F74F390>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F74F390>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:58:25 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7507D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:29 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7512D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:34 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F751E50>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:38 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F752990>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F752990>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:58:42 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F753ED0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:46 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F758A10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:50 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F759590>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:58:54 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F75A110>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F75A110>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:58:54 - INFO - test_callback: 56 - Тест проверки заказа обратного звонка запущен
+2023-12-23 01:58:58 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F2BF590>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:59:02 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F753010>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:59:06 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F74FC10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url
+2023-12-23 01:59:10 - ERROR - go_to_site: 32 - Ошибка открытия сайта
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F70B490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 30, in go_to_site
+    start_browser = self.driver.get(self.base_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 357, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/url (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F70B490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:59:14 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F6FFA90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:19 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F77C850>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:23 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F77D310>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:27 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F77E350>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F77E350>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:59:31 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F774DD0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:35 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7758D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:39 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F776610>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:43 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F777050>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F777050>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:59:43 - INFO - enter_text_into_field: 26 - Отправлено '70000000000' элементу phone
+2023-12-23 01:59:47 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F75A8D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:51 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F75BF50>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:55 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F788910>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 01:59:59 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F789490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F789490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 01:59:59 - ERROR - enter_text_into_field: 29 - Элемент ('xpath', '//*[@id="b24-b24-site-button-form-72"]/div/div[2]/div/div/div[2]/form/div[1]/div/div/div/div/input') не найден
+2023-12-23 02:00:03 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F78AA90>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:07 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F78B5D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:12 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F794190>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:16 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F794D10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F794D10>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 02:00:21 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F796250>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:25 - WARNING - urlopen: 871 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F796D50>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:29 - WARNING - urlopen: 871 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7978D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
+2023-12-23 02:00:33 - ERROR - find_element: 16 - Ошибка при поиске элемента
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1037, in _send_output
+    self.send(msg)
+  File "C:\Users\bonda\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 975, in send
+    self.connect()
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001C08F798490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\graduate work\BaseApp.py", line 13, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 96, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 84, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 742, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 346, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 118, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\_request_methods.py", line 217, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\poolmanager.py", line 444, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 874, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\graduate work\venv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=59541): Max retries exceeded with url: /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F798490>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение'))
+2023-12-23 02:00:37 - WARNING - urlopen: 871 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C08F7998D0>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение')': /session/986f1dcd23b3b3d07eb605e3ac6cd9da/element
