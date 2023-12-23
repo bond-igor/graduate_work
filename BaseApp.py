@@ -6,6 +6,7 @@ class BasePage:
 
 	def __init__(self, driver, url):
 		self.driver = driver
+		self.driver.maximize_window()
 		self.base_url = url
 
 	def find_element(self, locator, time=3):

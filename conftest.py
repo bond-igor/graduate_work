@@ -23,4 +23,4 @@ def browser():
         driver = webdriver.Chrome(service=service, options=options)
     yield driver
     driver.quit()
-    send_email()
+    #send_email()
